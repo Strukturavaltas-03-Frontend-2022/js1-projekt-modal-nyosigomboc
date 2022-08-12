@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Holder for a modal dialog box</title>
+</head>
+<body>
+    <div class="lupus_et_agnus">
+    <h1>Holder for a modal dialog box</h1>
+    <p>
+        Here should be some latin-looking gibberish (Lorem ipsum). I'll use some old tales instead.
+        Click on their titles to pop up a modal window!</p>
+    <p>
+        <h3 onclick="openAgnus()">Lupus et agnus</h3>
+        <pre>
+Ad rivum eundem lupus et agnus venerant 
+Siti compulsi; superior stabat lupus
+Longeque inferior agnus. Tunc fauce improba
+Latro incitatus iurgii causam intulit.
+"Cur" inquit "turbulentam fecisti mihi
+Aquam bibenti?" Laniger contra timens:
+"Qui possum, quaeso, facere, quod quereris, lupe?
+A te decurrit ad meos haustus liquor".
+Repulsus ille veritatis viribus:
+"Ante hos sex menses male, ait, dixisti mihi".
+Respondit agnus: "Equidem natus non eram".
+"Pater hercle tuus, ille inquit, male dixit mihi".
+Atque ita correptum lacerat iniusta nece.
+Haec propter illos scripta est homines fabula,
+Qui fictis causis innocentes opprimunt.
+        </pre>
+    </p>
+    </div>
+    <div>
+        <h3 onclick="openRana()">Rana rupta et bos</h3>
+        <pre>
+Inops, potentem dum vult imitari, perit.
+
+In prato quondam rana conspexit bovem,
+et tacta invidia tantae magnitudinis
+rugosam inflavit pellem. Tum natos suos
+interrogavit an bove esset latior.
+
+Illi negarunt. Rursus intendit cutem
+maiore nisu, et simili quaesivit modo,
+quis maior esset. Illi dixerunt 'bovem'.
+
+Novissime indignata, dum vult validius
+inflare sese, rupto iacuit corpore.
+        </pre>
+    </div>
+    <div class="modal__holder" onclick="clickOutsideModal()">
+        <div class="modal__window" onclick="window.event.stopPropagation()">
+            <header class="modal__header">
+                <div class="modal__title">Title</div>
+                <div class="modal__close" onclick="xModal()"></div>
+            </header>
+            <div class="modal__description">Description</div>
+            <footer class="modal__footer">
+                <button onclick="okModal()">OK</button>
+                <button onclick="cancelModal()">Cancel</button>
+            </footer>
+        </div>
+    </div>
+    <script src="js/modal.js">
+    </script>
+</body>
+</html>
